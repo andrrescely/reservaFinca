@@ -13,9 +13,11 @@ public class FincaService  {
     @Autowired
     private FincaRepo fincaRepo;
     public Finca insertar(Finca emp){
+
         return fincaRepo.save(emp);
     }
     public Finca actualizar(Finca emp){
+
         return fincaRepo.save(emp);
     }
     public List<Finca> listar(){
