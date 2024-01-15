@@ -8,23 +8,24 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class FincaService  {
+public class FincaService {
 
     @Autowired
     private FincaRepo fincaRepo;
-    public Finca insertar(Finca emp){
 
+    public Finca insertar(Finca emp) {
         return fincaRepo.save(emp);
     }
-    public Finca actualizar(Finca emp){
 
+    public Finca actualizar(Finca emp) {
         return fincaRepo.save(emp);
     }
-    public List<Finca> listar(){
+
+    public List<Finca> listar() {
         return fincaRepo.findAll();
     }
-    public void eliminar (Finca emp){
+
+    public void eliminar(Finca emp) {
         fincaRepo.delete(emp);
     }
-
 }
