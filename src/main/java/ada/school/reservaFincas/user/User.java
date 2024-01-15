@@ -34,9 +34,11 @@ public class User implements UserDetails {
     )
     private Integer id;
     private String name;
+    private String username;
     private String email;
     private String password;
     private Boolean enable;
+
 
     @Enumerated(EnumType.STRING)
     private ERole role;
