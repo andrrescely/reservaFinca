@@ -9,6 +9,7 @@ import java.util.List;
 
 @Service
 public class UsuariosService  {
+
     @Autowired
     private UserRepository userRepository;
     public User insertar(User usu){

@@ -10,6 +10,7 @@ import java.util.List;
 @RestController
 @RequestMapping("finca")
 public class FincaController {
+
     @Autowired
     private FincaService fincaService;
 

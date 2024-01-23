@@ -2,6 +2,7 @@ package ada.school.reservaFincas.entity;
 
 import jakarta.persistence.*;
 
+
 @Entity
 @Table(name = "finca")
 public class Finca {
