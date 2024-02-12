@@ -47,7 +47,7 @@ jobs:
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           IMAGE_TAG: ${{ github.sha }}
-          REPOSITORY: reservas-fincas
+          REPOSITORY: reservas-de-fincas
         run: |
           # Build a docker container and
           # push it to ECR so that it can
@@ -60,8 +60,8 @@ jobs:
         id: task-def
         uses: aws-actions/amazon-ecs-render-task-definition@v1
         with:
-          task-definition: reserva-fincas-task-definition.json
-          container-name: reserva-fincas
+          task-definition: reservas-de-fincas-task-definition.json
+          container-name: reserva-de-fincas
           image: ${{ steps.build-image.outputs.image }}
 
       - name: Deploy Amazon ECS task definition
