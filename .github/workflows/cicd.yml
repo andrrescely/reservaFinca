@@ -61,7 +61,7 @@ jobs:
         uses: aws-actions/amazon-ecs-render-task-definition@v2
         with:
           task-definition: reservas-de-fincas-task-definition.json
-          container-name: reserva-de-fincas
+          container-name: reservas-de-fincas
           image: ${{ steps.build-image.outputs.image }}
 
       - name: Deploy Amazon ECS task definition
