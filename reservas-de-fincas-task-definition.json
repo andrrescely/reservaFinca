@@ -1,5 +1,5 @@
 {
-  "taskDefinitionArn": "arn:aws:ecs:us-east-2:381492265947:task-definition/reservas-de-fincas-task-definition:1",
+  "taskDefinitionArn": "arn:aws:ecs:us-east-2:381492265947:task-definition/reservas-de-fincas-task-definition:2",
   "containerDefinitions": [
     {
       "name": "reservas-de-fincas",
@@ -36,7 +36,7 @@
   "taskRoleArn": "arn:aws:iam::381492265947:role/AWSECSTaskExecusionRole",
   "executionRoleArn": "arn:aws:iam::381492265947:role/AWSECSTaskExecusionRole",
   "networkMode": "awsvpc",
-  "revision": 1,
+  "revision": 2,
   "volumes": [],
   "status": "ACTIVE",
   "requiresAttributes": [
@@ -82,7 +82,7 @@
     "cpuArchitecture": "X86_64",
     "operatingSystemFamily": "LINUX"
   },
-  "registeredAt": "2024-02-12T19:32:18.823Z",
+  "registeredAt": "2024-02-12T22:04:49.002Z",
   "registeredBy": "arn:aws:iam::381492265947:root",
   "tags": []
 }
