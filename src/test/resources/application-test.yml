@@ -1,7 +1,7 @@
 spring:
 
   datasource:
-    url: jdbc:h2:mem:reserva_fincas
+    url: jdbc:h2:mem:reserva_finca
     username: sa
     driver-class-name: org.h2.Driver
     password: Test@123!

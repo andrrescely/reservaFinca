@@ -32,7 +32,7 @@ jobs:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v3
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCES_KEY }}
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: 'us-east-2'
 
@@ -47,7 +47,7 @@ jobs:
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           IMAGE_TAG: ${{ github.sha }}
-          REPOSITORY: reservas-de-fincas
+          REPOSITORY: reserva-finca
         run: |
           # Build a docker container and
           # push it to ECR so that it can
@@ -60,14 +60,14 @@ jobs:
         id: task-def
         uses: aws-actions/amazon-ecs-render-task-definition@v1
         with:
-          task-definition: reservas-de-fincas-task-definition.json
-          container-name: reservas-de-fincas
+          task-definition: reservafinca-task-definition.json
+          container-name: reserva-fincas
           image: ${{ steps.build-image.outputs.image }}
 
       - name: Deploy Amazon ECS task definition
         uses: aws-actions/amazon-ecs-deploy-task-definition@v1
         with:
           task-definition: ${{ steps.task-def.outputs.task-definition }}
-          service: reservas-fincas-service
-          cluster: DevCluster3
+          service: reserva-finca-service
+          cluster: FincaCluster1
           wait-for-service-stability: true
