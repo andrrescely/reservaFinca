@@ -2,7 +2,7 @@
   "taskDefinitionArn": "arn:aws:ecs:us-east-2:381492265947:task-definition/reserva-finca-task-definition:1",
   "containerDefinitions": [
     {
-      "name": "reserva-finca",
+      "name": "reserva-fincas",
       "image": "381492265947.dkr.ecr.us-east-2.amazonaws.com/reserva-finca:latest",
       "cpu": 0,
       "portMappings": [
