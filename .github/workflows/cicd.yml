@@ -60,7 +60,7 @@ jobs:
         id: task-def
         uses: aws-actions/amazon-ecs-render-task-definition@v1
         with:
-          task-definition: reservafinca-task-definition.json
+          task-definition: reserva-finca-task-definition.json
           container-name: reserva-fincas
           image: ${{ steps.build-image.outputs.image }}
 
