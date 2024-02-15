@@ -9,9 +9,12 @@ spring:
       ddl-auto: update
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://reserva-finca-db.c12ms24q0672.us-east-2.rds.amazonaws.com/reserva_finca
+    #url: jdbc:postgresql://reserva-finca-db.c12ms24q0672.us-east-2.rds.amazonaws.com/reserva_finca
+    url: jdbc:postgresql://localhost:5432/fincas
+
     username: postgres
-    password: Test123!
+    password: 123456
+    #password: Test123!
 
 application:
   security:
