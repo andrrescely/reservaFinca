@@ -12,6 +12,15 @@ public class Finca {
     private String nombre;
     private String direccion;
     private Integer capacidad;
+    private String  precio;
+
+    public String getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(String precio) {
+        this.precio = precio;
+    }
 
     public Integer getId() {
         return Id;

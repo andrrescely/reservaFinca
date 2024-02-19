@@ -8,13 +8,10 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.*;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 class FincaServiceTest {
@@ -38,6 +35,7 @@ class FincaServiceTest {
         expectedFinca.setNombre("Nombre de la Finca");
         expectedFinca.setDireccion("Ubicación");
         expectedFinca.setCapacidad(10);
+        expectedFinca.setPrecio("70.000");
 
         when(fincaRepo.save(any(Finca.class))).thenReturn(expectedFinca);
 
@@ -57,6 +55,7 @@ class FincaServiceTest {
         expectedFinca.setNombre("Nombre de la Finca");
         expectedFinca.setDireccion("Ubicación");
         expectedFinca.setCapacidad(10);
+        expectedFinca.setPrecio("70.000");
 
         when(fincaRepo.save(any(Finca.class))).thenReturn(expectedFinca);
 
@@ -72,8 +71,8 @@ class FincaServiceTest {
     void listar() {
         // Arrange
         List<Finca> expectedFincas = Arrays.asList(
-                createFinca(1, "Finca 1", "Ubicación 1", 5),
-                createFinca(2, "Finca 2", "Ubicación 2", 8)
+                createFinca(1, "Finca 1", "Ubicación 1", 5, "70.000" ),
+                createFinca(2, "Finca 2", "Ubicación 2", 8, "100.000")
         );
 
         when(fincaRepo.findAll()).thenReturn(expectedFincas);
@@ -89,7 +88,7 @@ class FincaServiceTest {
     @Test
     void eliminar() {
 
-        Finca fincaToDelete = createFinca(1, "Nombre de la Finca", "Ubicación", 10);
+        Finca fincaToDelete = createFinca(1, "Nombre de la Finca", "Ubicación", 10, "70.000");
 
 
         fincaService.eliminar(fincaToDelete);
@@ -99,12 +98,13 @@ class FincaServiceTest {
     }
 
 
-    private Finca createFinca(Integer id, String nombre, String direccion, Integer capacidad) {
+    private Finca createFinca(Integer id, String nombre, String direccion, Integer capacidad, String precio) {
         Finca finca = new Finca();
         finca.setId(id);
         finca.setNombre(nombre);
         finca.setDireccion(direccion);
         finca.setCapacidad(capacidad);
+        finca.setPrecio(precio);
         return finca;
     }
 }
