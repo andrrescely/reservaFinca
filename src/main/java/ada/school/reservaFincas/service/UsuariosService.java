@@ -2,7 +2,7 @@ package ada.school.reservaFincas.service;
 
 
 import ada.school.reservaFincas.repo.UserRepository;
-import ada.school.reservaFincas.user.User;
+import ada.school.reservaFincas.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;

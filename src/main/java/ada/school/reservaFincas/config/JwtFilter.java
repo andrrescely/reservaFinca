@@ -52,7 +52,7 @@ public class JwtFilter extends OncePerRequestFilter {
             // Asignar la informacion que viene del jwt al security context holder
             authenticationToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
             SecurityContextHolder.getContext().setAuthentication(authenticationToken);
-            //System.out.println(SecurityContextHolder.getContext().getAuthentication().getName());
+
         }
     }
 

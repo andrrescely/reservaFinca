@@ -1,7 +1,7 @@
 package ada.school.reservaFincas.controller;
 
 import ada.school.reservaFincas.service.UsuariosService;
-import ada.school.reservaFincas.user.User;
+import ada.school.reservaFincas.entity.User;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

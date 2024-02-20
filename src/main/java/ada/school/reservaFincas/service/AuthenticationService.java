@@ -2,7 +2,7 @@ package ada.school.reservaFincas.service;
 import ada.school.reservaFincas.exception.BreweryTourException;
 import ada.school.reservaFincas.lasting.EMessage;
 import ada.school.reservaFincas.user.AuthenticationDto;
-import ada.school.reservaFincas.user.User;
+import ada.school.reservaFincas.entity.User;
 import ada.school.reservaFincas.user.UserDto;
 import ada.school.reservaFincas.repo.UserRepository;
 import org.springframework.dao.DataIntegrityViolationException;

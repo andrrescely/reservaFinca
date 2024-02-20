@@ -1,4 +1,4 @@
-package ada.school.reservaFincas.user;
+package ada.school.reservaFincas.entity;
 
 
 import java.util.Collection;
@@ -8,7 +8,6 @@ import java.util.Objects;
 import ada.school.reservaFincas.lasting.ERole;
 import jakarta.persistence.*;
 import lombok.*;
-import org.hibernate.proxy.HibernateProxy;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

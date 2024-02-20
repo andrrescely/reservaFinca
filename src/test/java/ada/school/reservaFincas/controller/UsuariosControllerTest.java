@@ -1,7 +1,7 @@
 package ada.school.reservaFincas.controller;
 
 import ada.school.reservaFincas.service.UsuariosService;
-import ada.school.reservaFincas.user.User;
+import ada.school.reservaFincas.entity.User;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
